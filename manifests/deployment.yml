@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gameaidevmypythondockerrepo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gameaidevmypythondockerrepo
+  template:
+    metadata:
+      labels:
+        app: gameaidevmypythondockerrepo 
+    spec:
+      containers:
+        - name: gameaidevmypythondockerrepo 
+          image: gaiaksacr2.azurecr.io/gameaidevmypythondockerrepo
+          ports:
+          - containerPort: 5000
